@@ -17,6 +17,8 @@ revived version of https://github.com/redxdev/GodotCSTools</Description>
     <PackageTags>godot</PackageTags>
     <PackageId>GodotCSToolbox</PackageId>
     <Product>GodotCSToolbox</Product>
+    <AssemblyName>GodotCSToolbox</AssemblyName>
+    <RootNamespace>GodotCSToolbox</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GodotSharp">

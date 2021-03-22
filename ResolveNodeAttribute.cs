@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GodotCSTools
+namespace GodotCSToolbox
 {
     /// <summary>
     /// Fields with this attribute will have their value set based on a NodePath in another field.

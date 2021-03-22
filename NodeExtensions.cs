@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace GodotCSTools
+namespace GodotCSToolbox
 {
     /// <summary>
     /// Contains extensions to the <see cref="Godot.Node"/> class.

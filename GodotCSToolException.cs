@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GodotCSTools
+namespace GodotCSToolbox
 {
     public class GodotCSToolException : Exception
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GodotCSTools
+namespace GodotCSToolbox
 {
     /// <summary>
     /// Sets the value of a field to the node at the given path.

@@ -3,7 +3,7 @@ using System.IO;
 using Godot;
 using File = Godot.File;
 
-namespace GodotCSTools
+namespace GodotCSToolbox
 {
     /// <summary>
     /// Wrapper for <see cref="Godot.File"/> that allows it to be used as a <see cref="System.IO.Stream"/>.
