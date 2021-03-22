@@ -1,6 +1,6 @@
-# Godot C# Tools
+# Godot C# Toolbox
 
-The [original project here](https://github.com/redxdev/GodotCSTools).
+The [original Godot C# Toolx project is here](https://github.com/redxdev/GodotCSTools).
 I used that old project as a starting point.
 
 This is a small library of utility functions that make working in C# when using [Godot](https://godotengine.org/) much easier.
@@ -14,13 +14,6 @@ fill in some of the gaps.
 
 This library is [NOT YET available on nuget]()
 
-To install via NuGet, create a `packages.config` file in the same folder as your Godot project's `.csproj`.
-
-Inside, add the following:
-
-```xml
-<package id="GodotCSTools" version="1.0.0-beta9" targetFramework="net45" />
-```
 
 Then, edit the `.csproj` file for your Godot project. Find the lines referencing `GodotSharp.dll` and `GodotSharpEditor.dll`
 and add the following lines below the `</Reference>` tag:
@@ -29,24 +22,14 @@ and add the following lines below the `</Reference>` tag:
 <Reference Include="GodotCSTools">
     <HintPath>packages\GodotCSTools.1.0.0-beta9\lib\net45\GodotCSTools.dll</HintPath>
 </Reference>
+
 ```
 
 The result should look something like this:
 
 ```xml
-<ItemGroup>
-    <Reference Include="GodotSharp">
-      <HintPath>$(ProjectDir)\.mono\assemblies\GodotSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GodotSharpEditor" Condition=" '$(Configuration)' == 'Tools' ">
-      <HintPath>$(ProjectDir)\.mono\assemblies\GodotSharpEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GodotCSTools">
-        <HintPath>packages\GodotCSTools.1.0.0-beta9\lib\net45\GodotCSTools.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
+  <ItemGroup>
+    <PackageReference Include="GodotCSTools" Version="1.0.0-beta10" />
   </ItemGroup>
 ```
 

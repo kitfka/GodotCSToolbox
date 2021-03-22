@@ -9,7 +9,7 @@
 
 revived version of https://github.com/redxdev/GodotCSTools</Description>
     <Copyright>Copyright (c) 2021 Philip Thuijs</Copyright>
-    <PackageLicenseUrl>https://github.com/redxdev/GodotCSTools/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/kitfka/GodotCSToolbox</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kitfka/GodotCSToolbox</RepositoryUrl>
     <PackageReleaseNotes>Build against 3.2.3 assemblies</PackageReleaseNotes>
@@ -19,12 +19,19 @@ revived version of https://github.com/redxdev/GodotCSTools</Description>
     <Product>GodotCSToolbox</Product>
     <AssemblyName>GodotCSToolbox</AssemblyName>
     <RootNamespace>GodotCSToolbox</RootNamespace>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GodotSharp">
       <HintPath>$(ProjectDir)\.mono\assemblies\Debug\GodotSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   
 </Project>
