@@ -7,8 +7,7 @@ This is a small library of utility functions that make working in C# when using 
 
 ## Project Goals
 
-Godot's C# support is very new, and doesn't take advantage of many of C#'s best features. As such, this library exists to help
-fill in some of the gaps.
+Adding some useful tools to make c# in Godot's a little bit nicer.
 
 ## Installing
 
@@ -127,6 +126,8 @@ private AnimatedSprite _sprite = null;
 There are a number of extensions to the `Node` class.
 
 Note that `this` is required when calling extension methods.
+
+The are in the namespace ```GodotCSToolbox.Extensions```
 
 #### `Node.GetNode<T>()`
 

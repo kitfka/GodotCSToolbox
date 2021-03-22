@@ -1,9 +1,9 @@
 ﻿using Godot;
 
-namespace GodotCSToolbox
+namespace GodotCSToolbox.Extensions
 {
     /// <summary>
-    /// Contains extensions to the <see cref="Godot.Node"/> class.
+    /// Contains extensions to the <see cref="Node"/> class.
     /// </summary>
     public static class NodeExtensions
     {
@@ -34,10 +34,10 @@ namespace GodotCSToolbox
         }
 
         /// <summary>
-        /// Finds a descendant of this node. See <see cref="Godot.Node.FindNode(string, bool, bool)"/>.
+        /// Finds a descendant of this node. See <see cref="Node.FindNode(string, bool, bool)"/>.
         /// </summary>
         /// <remarks>
-        /// This does not search by the type - it only helps with casting the result of <see cref="Godot.Node.FindNode(string, bool, bool)"/>.
+        /// This does not search by the type - it only helps with casting the result of <see cref="Node.FindNode(string, bool, bool)"/>.
         /// </remarks>
         /// <typeparam name="T">The type of the node to find.</typeparam>
         /// <param name="self"></param>
