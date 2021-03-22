@@ -12,37 +12,25 @@ fill in some of the gaps.
 
 ## Installing
 
-This library is [NOT YET available on nuget]()
+This library is [available on nuget](https://www.nuget.org/packages/GodotCSToolbox)
 
 
-Then, edit the `.csproj` file for your Godot project. Find the lines referencing `GodotSharp.dll` and `GodotSharpEditor.dll`
-and add the following lines below the `</Reference>` tag:
-
-```xml
-<Reference Include="GodotCSTools">
-    <HintPath>packages\GodotCSTools.1.0.0-beta9\lib\net45\GodotCSTools.dll</HintPath>
-</Reference>
-
-```
+use 
+```dotnet add package GodotCSToolbox --version 1.0.0-beta10```
 
 The result should look something like this:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="GodotCSTools" Version="1.0.0-beta10" />
+    <PackageReference Include="GodotCSToolbox" Version="1.0.0-beta10" />
   </ItemGroup>
 ```
 
-Finally, make sure you have `nuget` installed (see `https://www.nuget.org/downloads`) and run the following in the same directory
-as your `packages.config` file:
 
-    nuget restore
-
-If you are not using the nuget command line, refer to your tool's documentation on restoring packages.
 
 ## Building Yourself
 
-Copy a `.mono` folder into this project's folder from an existing Godot (with mono) project. The `GodotCSTools.csproj` looks
+Copy a `.mono` folder into this project's folder from an existing Godot (with mono) project. The `GodotCSToolbox.csproj` looks
 for a couple of assemblies from Godot in that folder.
 
 ## Examples
@@ -54,7 +42,7 @@ for a couple of assemblies from Godot in that folder.
 ```csharp
 using System;
 using Godot;
-using GodotCSTools;
+using GodotCSToolbox;
 
 public class MyNode : Node
 {
@@ -82,7 +70,7 @@ You will receive a warning, `CS0649: field is never assigned to`, if you declare
 private AnimatedSprite _sprite;
 ```
 
-This is because the compiler doesn't know that GodotCSTools will be setting the value later. To hide the warning, give
+This is because the compiler doesn't know that GodotCSToolbox will be setting the value later. To hide the warning, give
 the field a default value of null:
 
 ```csharp
@@ -97,7 +85,7 @@ private AnimatedSprite _sprite = null;
 ```csharp
 using System;
 using Godot;
-using GodotCSTools;
+using GodotCSToolbox;
 
 public class MyNode : Node
 {
@@ -126,7 +114,7 @@ You will receive a warning, `CS0649: field is never assigned to`, if you declare
 private AnimatedSprite _sprite;
 ```
 
-This is because the compiler doesn't know that GodotCSTools will be setting the value later. To hide the warning, give
+This is because the compiler doesn't know that GodotCSToolbox will be setting the value later. To hide the warning, give
 the field a default value of null:
 
 ```csharp

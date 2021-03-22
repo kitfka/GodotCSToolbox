@@ -7,7 +7,7 @@
     <Company />
     <Description>A set of tools to make using C# in Godot easier!
 
-revived version of https://github.com/redxdev/GodotCSTools</Description>
+revived version of https://github.com/redxdev/GodotCSToolbox</Description>
     <Copyright>Copyright (c) 2021 Philip Thuijs</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/kitfka/GodotCSToolbox</PackageProjectUrl>
