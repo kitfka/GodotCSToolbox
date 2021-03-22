@@ -33,11 +33,11 @@ namespace GodotCSTools
             Error result;
             if (compressionMode.HasValue)
             {
-                result = _file.OpenCompressed(path, (int)flags, (int)compressionMode.Value);
+                result = _file.OpenCompressed(path, flags, compressionMode.Value);
             }
             else
             {
-                result = _file.Open(path, (int)flags);
+                result = _file.Open(path, flags);
             }
 
             if (result != Error.Ok)

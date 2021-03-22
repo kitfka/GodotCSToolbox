@@ -1,6 +1,7 @@
 # Godot C# Tools
 
-**This isn't actively maintained right now.**
+The [original project here](https://github.com/redxdev/GodotCSTools).
+I used that old project as a starting point.
 
 This is a small library of utility functions that make working in C# when using [Godot](https://godotengine.org/) much easier.
 
@@ -11,7 +12,7 @@ fill in some of the gaps.
 
 ## Installing
 
-This library is [available on nuget](https://www.nuget.org/packages/GodotCSTools/)!
+This library is [NOT YET available on nuget]()
 
 To install via NuGet, create a `packages.config` file in the same folder as your Godot project's `.csproj`.
 
@@ -187,7 +188,7 @@ Operations on `GodotFileStream` should work similarly to standard .NET streams.
 
 ## Contributing
 
-Contributions are welcome! Post an issue or make a pull request [here](https://github.com/redxdev/GodotCSTools/issues)!
+Contributions are welcome! Post an issue or make a pull request [here](https://github.com/kitfka/GodotCSToolbox/issues)!
 
 Any code submitted should follow these (very general) guidelines:
 
