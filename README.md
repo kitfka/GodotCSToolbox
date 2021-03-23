@@ -1,13 +1,13 @@
 # Godot C# Toolbox
 
-The [original Godot C# Toolx project is here](https://github.com/redxdev/GodotCSTools).
+The [original Godot C# Tools project is here](https://github.com/redxdev/GodotCSTools).
 I used that old project as a starting point.
 
 This is a small library of utility functions that make working in C# when using [Godot](https://godotengine.org/) much easier.
 
 ## Project Goals
 
-Adding some useful tools to make c# in Godot's a little bit nicer.
+Adding some useful tools to make c# in Godot a little bit nicer.
 
 ## Installing
 
