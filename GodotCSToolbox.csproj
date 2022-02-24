@@ -22,16 +22,15 @@ revived version of https://github.com/redxdev/GodotCSToolbox</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GodotSharp">
-      <HintPath>$(ProjectDir)\.mono\assemblies\Debug\GodotSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <HintPath>.mono\assemblies\Debug\GodotSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   
 </Project>
