@@ -52,11 +52,11 @@ namespace GodotCSToolbox
 
         public override bool CanWrite => _flags == File.ModeFlags.Write || _flags == File.ModeFlags.ReadWrite || _flags == File.ModeFlags.WriteRead;
 
-        public override long Length => _file.GetLen();
+        public override long Length => (long)_file.GetLen();
 
         public override long Position
         {
-            get => _file.GetPosition();
+            get => (long)_file.GetPosition();
             set => _file.Seek((int)value);
         }
 
@@ -102,7 +102,7 @@ namespace GodotCSToolbox
                     break;
 
                 case System.IO.SeekOrigin.Current:
-                    _file.Seek(_file.GetPosition() + (int)offset);
+                    _file.Seek((int)_file.GetPosition() + (int)offset);
                     break;
 
                 case System.IO.SeekOrigin.End:
@@ -113,7 +113,7 @@ namespace GodotCSToolbox
             if (_file.GetError() != Error.Ok)
                 throw new IOException($"Error seeking file: {_file.GetError()}");
 
-            return _file.GetPosition();
+            return (long)_file.GetPosition();
         }
 
         public override void SetLength(long value)
