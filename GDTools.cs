@@ -34,6 +34,9 @@ namespace GodotCSToolbox
                         case NodePathAttribute pathAttr:
                             ResolveNodeFromPath(node, field, pathAttr);
                             break;
+                        case UniqueNodeAttribute uniqueNode:
+                            AssignPathToField(node, field, $"%{field.Name}", nameof(UniqueNodeAttribute));
+                            break;
                     }
                 }
             }
@@ -50,6 +53,9 @@ namespace GodotCSToolbox
 
                         case NodePathAttribute pathAttr:
                             ResolveNodeFromPath(node, property, pathAttr);
+                            break;
+                        case UniqueNodeAttribute uniqueNode:
+                            AssignPathToProperty(node, property, $"%{property.Name}", nameof(UniqueNodeAttribute));
                             break;
                     }
                 }

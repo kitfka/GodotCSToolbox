@@ -21,6 +21,10 @@ namespace GodotCSToolbox.Extensions
         /// <param name="self"></param>
         public static void StopLoop(this AudioStreamPlayer self)
         {
+            //if (self.IsConnected("finished", self, "play"))
+            //{
+            //    self.Disconnect("finished", self, "play");
+            //}
             self.Disconnect("finished", self, "play");
         }
     }

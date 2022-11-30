@@ -13,7 +13,7 @@ revived version of https://github.com/redxdev/GodotCSToolbox</Description>
     <PackageProjectUrl>https://github.com/kitfka/GodotCSToolbox</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kitfka/GodotCSToolbox</RepositoryUrl>
     <PackageReleaseNotes>Build against Godot 3.2.3 assemblies</PackageReleaseNotes>
-    <Version>1.0.0-beta11</Version>
+    <Version>1.0.0-beta14</Version>
     <PackageTags>godot</PackageTags>
     <PackageId>GodotCSToolbox</PackageId>
     <Product>GodotCSToolbox</Product>
