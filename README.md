@@ -103,6 +103,28 @@ public class MyNode : Node
 }
 ```
 
+### UniqueNodeAttribute
+
+`UniqueNodeAttribute` gets the node that has a "unique Name". Check [Scene Unique Nodes](https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html)
+
+```csharp
+using System;
+using Godot;
+using GodotCSToolbox;
+
+public class MyNode : Node
+{
+    [UniqueNode] // will call somthing similar to GetNode("$PlayerSprite")
+    private AnimatedSprite PlayerSprite;
+
+    public override void _Ready()
+    {
+        this.SetupNodeTools(); // required to apply the effects of attributes. `this` is required due to how extension methods work.
+
+        _sprite.Play("SomeAnimation"); // _sprite should now contain a node!
+    }
+}
+```
 
 #### Gotchas
 
