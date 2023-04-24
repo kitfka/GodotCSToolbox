@@ -10,10 +10,10 @@ namespace GodotCSToolbox.Extensions
         /// You can disconect it with <see cref="StopLoop(AudioStreamPlayer)"/>.
         /// </summary>
         /// <param name="self"></param>
-        public static void Loop(this AudioStreamPlayer self)
-        {
-            self.Connect("finished", self, "play");
-        }
+        //public static void Loop(this AudioStreamPlayer self)
+        //{
+        //    self.Connect("finished", self, "play");
+        //}
 
         /// <summary>
         /// Stop the looping that started with <see cref="Loop(AudioStreamPlayer)"/>.
@@ -25,7 +25,8 @@ namespace GodotCSToolbox.Extensions
             //{
             //    self.Disconnect("finished", self, "play");
             //}
-            self.Disconnect("finished", self, "play");
+            //self.Disconnect("finished", self, "play");
+            
         }
     }
 }

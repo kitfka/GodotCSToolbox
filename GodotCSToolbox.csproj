@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Philip Thuijs</Authors>
     <Company />
     <Description>A set of tools to make using C# in Godot easier!
 
 revived version of https://github.com/redxdev/GodotCSToolbox</Description>
-    <Copyright>Copyright (c) 2021 Philip Thuijs</Copyright>
+    <Copyright>Copyright (c) 2023 Philip Thuijs</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/kitfka/GodotCSToolbox</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kitfka/GodotCSToolbox</RepositoryUrl>
-    <PackageReleaseNotes>Build against Godot 3.2.3 assemblies</PackageReleaseNotes>
-    <Version>1.0.0-beta15</Version>
+    <PackageReleaseNotes>Build for Godot 4</PackageReleaseNotes>
+    <Version>2.0.0-beta17</Version>
     <PackageTags>godot</PackageTags>
     <PackageId>GodotCSToolbox</PackageId>
     <Product>GodotCSToolbox</Product>
@@ -29,9 +29,7 @@ revived version of https://github.com/redxdev/GodotCSToolbox</Description>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GodotSharp">
-      <HintPath>.mono\assemblies\Debug\GodotSharp.dll</HintPath>
-    </Reference>
+    <PackageReference Include="GodotSharp" Version="4.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="README.md">

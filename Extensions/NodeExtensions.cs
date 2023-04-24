@@ -45,11 +45,11 @@ namespace GodotCSToolbox.Extensions
         /// <param name="recursive"></param>
         /// <param name="owned"></param>
         /// <returns>The requested node on success, null on failure or if the requested node is of the wrong type.</returns>
-        public static T FindNode<T>(this Node self, string mask, bool recursive = true, bool owned = true)
-            where T : Node
-        {
-            return self.FindNode(mask, recursive, owned) as T;
-        }
+        //public static T FindNode<T>(this Node self, string mask, bool recursive = true, bool owned = true)
+        //    where T : Node
+        //{
+        //    return self.FindNode(mask, recursive, owned) as T;
+        //}
 
         /// <summary>
         /// Get a child node by its index, casted to the specified type.

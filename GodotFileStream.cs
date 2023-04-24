@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
 using Godot;
-using File = Godot.File;
+using File = Godot.FileAccess;
+
+
 
 namespace GodotCSToolbox
 {
@@ -14,8 +16,8 @@ namespace GodotCSToolbox
     /// </remarks>
     public class GodotFileStream : Stream, IDisposable
     {
-        private File _file;
-        private File.ModeFlags _flags;
+        private File? _file;
+        private Godot.FileAccess.ModeFlags _flags;
 
         /// <summary>
         /// Create a new instance of the <see cref="GodotFileStream"/> class.
@@ -25,24 +27,25 @@ namespace GodotCSToolbox
         /// <param name="compressionMode">If not null, this will enable compression/decompression.</param>
         public GodotFileStream(string path, File.ModeFlags flags, File.CompressionMode? compressionMode = null)
         {
+
             if (path == null)
                 throw new ArgumentNullException("path");
 
-            _file = new File();
             _flags = flags;
-            Error result;
             if (compressionMode.HasValue)
             {
-                result = _file.OpenCompressed(path, flags, compressionMode.Value);
+                // TODO: This won't work for 3th party files. Check FileAccess.OpenCompressed method in docs why and wierd solution!
+                _file = File.OpenCompressed(path, flags, compressionMode.Value);
             }
             else
             {
-                result = _file.Open(path, flags);
+                _file = File.Open(path, flags);
             }
 
-            if (result != Error.Ok)
+
+            if (_file.GetError() != Error.Ok)
             {
-                throw new IOException($"Unable to open \"{path}\": {result}");
+                throw new IOException($"Unable to open \"{path}\": {_file.GetError()}");
             }
         }
 
@@ -52,17 +55,18 @@ namespace GodotCSToolbox
 
         public override bool CanWrite => _flags == File.ModeFlags.Write || _flags == File.ModeFlags.ReadWrite || _flags == File.ModeFlags.WriteRead;
 
-        public override long Length => (long)_file.GetLen();
+        public override long Length => (long)_file.GetLength();
+        //public override long Length => (long)_file.GetLen();
 
         public override long Position
         {
             get => (long)_file.GetPosition();
-            set => _file.Seek((int)value);
+            set => _file.Seek((ulong)value);
         }
 
         public override void Flush()
         {
-            // no-op
+            _file.Flush();
         }
 
         public override int Read(byte[] buffer, int offset, int count)
@@ -98,11 +102,11 @@ namespace GodotCSToolbox
             switch (origin)
             {
                 case System.IO.SeekOrigin.Begin:
-                    _file.Seek((int)offset);
+                    _file.Seek((ulong)offset);
                     break;
 
                 case System.IO.SeekOrigin.Current:
-                    _file.Seek((int)_file.GetPosition() + (int)offset);
+                    _file.Seek(_file.GetPosition() + (ulong)offset);
                     break;
 
                 case System.IO.SeekOrigin.End:

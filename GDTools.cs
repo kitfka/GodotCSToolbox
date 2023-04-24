@@ -2,6 +2,7 @@
 using System.Reflection;
 using Godot;
 
+
 namespace GodotCSToolbox
 {
     /// <summary>
@@ -64,9 +65,10 @@ namespace GodotCSToolbox
 
         /// <summary>
         /// Run tools on the given object.
+        /// TODO: change this, there is no longer the old godot object!
         /// </summary>
         /// <param name="obj">The object.</param>
-        public static void SetupObjectTools(this Godot.Object obj)
+        public static void SetupObjectTools(this Godot.Variant obj)
         {
         }
 

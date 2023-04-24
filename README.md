@@ -15,22 +15,16 @@ This library is [available on nuget](https://www.nuget.org/packages/GodotCSToolb
 
 
 use 
-```dotnet add package GodotCSToolbox --version 1.0.0-beta10```
+```dotnet add package GodotCSToolbox --version 2.0.0-beta17```
 
 The result should look something like this:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="GodotCSToolbox" Version="1.0.0-beta10" />
+    <PackageReference Include="GodotCSToolbox" Version="2.0.0-beta17" />
   </ItemGroup>
 ```
 
-
-
-## Building Yourself
-
-Copy a `.mono` folder into this project's folder from an existing Godot (with mono) project. The `GodotCSToolbox.csproj` looks
-for a couple of assemblies from Godot in that folder.
 
 ## Examples
 
